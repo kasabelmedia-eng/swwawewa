@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cream-canvas: #f4f3e7;
+    --deep-forest: #00473c;
+    --lime-glow: #e6ff55;
+    --sage-mist: #d8e5d6;
+    --warm-sand: #e8dcc6;
+    --forest-shadow: #0e150e;
+    --pure-ink: #000000;
+    --warm-gray: #8c8c82;
+    --slate-gray: #555555;
+
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-editorial: 'Newsreader', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    background-color: var(--cream-canvas);
+    color: var(--forest-shadow);
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Typography & Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Extreme tight leading for SweetSans display style */
+.leading-tight-display {
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+}
+
+.leading-headline {
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+/* Ghost link interactive underline effect */
+.ghost-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--forest-shadow);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.ghost-link .arrow {
+  transition: transform 0.2s ease;
+}
+
+.ghost-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+.ghost-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ghost-link:hover::after {
+  width: 100%;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f3e7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00473c33;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00473c66;
+}

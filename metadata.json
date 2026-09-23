@@ -1,0 +1,6 @@
+{
+  "name": "Sweetgreen",
+  "description": "Healthy salads, hearty wraps, grain bowls, and warm plates made in-house from scratch, using whole produce delivered that morning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
